@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/*reset*/
 
 * {
     margin: 0;
@@ -85,9 +83,7 @@ SCREEN SYSTEM
     }
 }
 
-/* =========================
-OPENING SCREEN
-========================= */
+/* opening scrn */
 
 .opening-content {
 width: min(90%, 500px);
@@ -143,9 +139,7 @@ opacity: 0.7;
 
 }
 
-/* =========================
-BUTTONS
-========================= */
+/*btns*/
 
 .main-button {
 border: none;
@@ -184,9 +178,7 @@ background: #6b4b59;
 transform: translateY(0);
 }
 
-/* =========================
-LETTER
-========================= */
+/*letter*/
 
 .letter {
     width: 100%;
@@ -291,233 +283,7 @@ opacity: 0.4;
     opacity: 0.85;
 }
 
-/* =========================
-MUSIC
-========================= */
-
-.music-container {
-width: min(92%, 600px);
-
-padding: 40px 30px;
-
-background: rgba(255, 248, 250, 0.94);
-
-border-radius: 24px;
-
-box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.2);
-
-backdrop-filter: blur(10px);
-
-text-align: center;
-
-}
-
-.music-header {
-display: flex;
-
-justify-content: center;
-align-items: center;
-
-gap: 18px;
-
-margin-bottom: 30px;
-
-}
-
-.music-header h2 {
-font-size: clamp(1.6rem, 5vw, 2.2rem);
-font-weight: normal;
-}
-
-.music-header span {
-opacity: 0.5;
-}
-
-/* Album artwork */
-
-.album-art-container {
-width: 220px;
-height: 220px;
-
-margin: 0 auto 25px;
-
-overflow: hidden;
-
-border-radius: 14px;
-
-box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.2);
-
-}
-
-.album-art-container img {
-width: 100%;
-height: 100%;
-
-object-fit: cover;
-
-display: block;
-
-}
-
-/* Song information */
-
-.now-playing h3 {
-font-size: 1.35rem;
-
-margin-bottom: 5px;
-
-}
-
-.now-playing p {
-opacity: 0.65;
-}
-
-/* Player controls */
-
-.player-controls {
-display: flex;
-
-justify-content: center;
-align-items: center;
-
-gap: 25px;
-
-margin-top: 25px;
-
-}
-
-.player-button,
-.play-button {
-border: none;
-
-background: transparent;
-
-color: #4a3540;
-
-cursor: pointer;
-
-font-family: inherit;
-
-transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-
-}
-
-.player-button {
-font-size: 1.6rem;
-}
-
-.play-button {
-width: 55px;
-height: 55px;
-
-border-radius: 50%;
-
-background: #4a3540;
-color: white;
-
-font-size: 1.2rem;
-
-}
-
-.player-button,
-.play-button {
-transform: scale(1.1);
-}
-
-/* Progress bar */
-
-.progress-container {
-display: flex;
-
-align-items: center;
-
-gap: 10px;
-
-margin-top: 20px;
-
-font-size: 0.8rem;
-
-opacity: 0.7;
-
-}
-
-#progress-bar {
-flex: 1;
-
-cursor: pointer;
-
-}
-
-/* Playlist */
-
-.playlist {
-margin-top: 35px;
-
-text-align: left;
-
-}
-
-.playlist h3 {
-margin-bottom: 12px;
-
-text-align: center;
-
-font-size: 1.1rem;
-
-}
-
-#playlist-items {
-display: flex;
-
-flex-direction: column;
-
-gap: 8px;
-
-}
-
-.playlist-item {
-width: 100%;
-
-padding: 13px 15px;
-
-border: none;
-
-border-radius: 10px;
-
-background: rgba(74, 53, 64, 0.07);
-
-color: #4a3540;
-
-font-family: inherit;
-
-text-align: left;
-
-cursor: pointer;
-
-transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-
-}
-
-.playlist-item {
-background: rgba(74, 53, 64, 0.13);
-
-transform: translateX(3px);
-
-}
-
-.playlist-item.active {
-background: rgba(74, 53, 64, 0.16);
-}
-
-/* =========================
-QUESTION
-========================= */
+/*question */
 
 .question-container {
 width: min(90%, 650px);
@@ -627,9 +393,7 @@ color: #4a3540;
 
 }
 
-/* =========================
-FINAL SCREEN
-========================= */
+/*fnalscrn*/
 
 .final-container {
 width: min(90%, 600px);
@@ -683,9 +447,7 @@ font-size: 1rem !important;
 
 }
 
-/* =========================
-ANIMATIONS
-========================= */
+/*animation */
 
 @keyframes fadeIn {
 
@@ -727,9 +489,7 @@ to {
 
 }
 
-/* =========================
-MOBILE
-========================= */
+/*mobileview */
 
 @media (max-width: 600px) {
 
@@ -770,9 +530,7 @@ MOBILE
 
 }
 
-/* =========================
-   DATE SELECTION
-========================= */
+/*dateselection*/
 
 .date-container {
     width: min(90%, 620px);
@@ -827,9 +585,7 @@ MOBILE
 }
 
 
-/* =========================
-   DATE FORM
-========================= */
+/*dateform */
 
 .date-form {
     display: flex;
@@ -910,9 +666,7 @@ MOBILE
 }
 
 
-/* =========================
-   CONFIRMED DATE
-========================= */
+/*dateconfirm*/
 
 .confirmed-container {
     width: min(90%, 600px);
@@ -987,9 +741,7 @@ MOBILE
 }
 
 
-/* =========================
-   MOBILE DATE SCREEN
-========================= */
+/*mobiledatescrn */
 
 @media (max-width: 600px) {
 
@@ -1003,9 +755,7 @@ MOBILE
 
 }
 
-/* =========================
-   ENVELOPE LETTER ANIMATION
-========================= */
+/*letteranimation */
 
 .envelope {
     position: relative;
@@ -1238,9 +988,7 @@ MOBILE
     z-index: 4;
 }
 
-/* =========================
-   OPEN ANIMATION
-========================= */
+/*letteropenanimation*/
 
 .letter-screen-open .envelope-flap {
     transform: rotateX(180deg);
@@ -1258,9 +1006,7 @@ MOBILE
     z-index: 10;
 }
 
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-========================= */
+/*mobileresponsive design */
 
 @media (max-width: 600px) {
 
@@ -1272,9 +1018,7 @@ MOBILE
     }
 
 
-    /* =========================
-       OPENING SCREEN
-    ========================= */
+    /*openscrnm*/
 
     .opening-content {
         width: 100%;
@@ -1297,9 +1041,7 @@ MOBILE
     }
 
 
-    /* =========================
-       LETTER
-    ========================= */
+    /* letter*/
 
     .letter-container {
         width: 100%;
@@ -1327,60 +1069,7 @@ MOBILE
         line-height: 1.6;
     }
 
-
-    /* =========================
-       MUSIC PLAYER
-    ========================= */
-
-    .music-container {
-        width: 100%;
-        max-width: 380px;
-        padding: 20px 15px;
-        box-sizing: border-box;
-    }
-
-    .music-header h2 {
-        font-size: 1.5rem;
-    }
-
-    .album-art-container {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .album-art-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .player-controls {
-        gap: 20px;
-    }
-
-    .progress-container {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    #progress-bar {
-        width: 100%;
-    }
-
-    .playlist {
-        width: 100%;
-    }
-
-    .playlist-item {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================
-       QUESTION
-    ========================= */
+    /*quesiton*/
 
     .question-container {
         width: 100%;
@@ -1408,9 +1097,7 @@ MOBILE
     }
 
 
-    /* =========================
-       DATE SELECTION
-    ========================= */
+    /* selectdatre*/
 
     .date-container {
         width: 100%;
@@ -1443,9 +1130,7 @@ MOBILE
     }
 
 
-    /* =========================
-       CONFIRMED SCREEN
-    ========================= */
+    /* scrnconfrim */
 
     .confirmed-container {
         width: 100%;
@@ -1464,9 +1149,7 @@ MOBILE
     }
 
 
-    /* =========================
-       FINAL SCREEN
-    ========================= */
+    /*final */
 
     .final-container {
         width: 100%;
@@ -1490,9 +1173,7 @@ MOBILE
     transform-origin: center;
 }
 
-/* =========================
-   SPOTIFY PLAYER
-========================= */
+/* spotify*/
 
 .spotify-player {
     width: 100%;
