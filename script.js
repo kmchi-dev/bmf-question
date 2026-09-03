@@ -257,21 +257,15 @@ if (selectedEvent === "Something else") {
     const [hours, minutes] =
         selectedTime.split(":");
 
-    const timeObject = new Date();
+    let hour = Number(hours);
 
-    timeObject.setHours(
-        Number(hours),
-        Number(minutes)
-    );
+    const ampm = hour >= 12 ? "PM" : "AM";=
 
-    const formattedTime =
-        timeObject.toLocaleTimeString(
-            undefined,
-            {
+    hour = hour % 12 || 12;
                 hour: "numeric",
                 minute: "2-digit"
-            }
-        );
+    const formattedTime =
+    `${hour}:${minutes} ${ampm}`;
 
     /* Put selections on confirmation screen */
     confirmedDateText.textContent =
