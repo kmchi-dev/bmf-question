@@ -262,8 +262,7 @@ if (selectedEvent === "Something else") {
     const ampm = hour >= 12 ? "PM" : "AM";
 
     hour = hour % 12 || 12;
-                hour: "numeric",
-                minute: "2-digit"
+                
     const formattedTime =
     `${hour}:${minutes} ${ampm}`;
 
