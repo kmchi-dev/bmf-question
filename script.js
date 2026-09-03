@@ -259,7 +259,7 @@ if (selectedEvent === "Something else") {
 
     let hour = Number(hours);
 
-    const ampm = hour >= 12 ? "PM" : "AM";=
+    const ampm = hour >= 12 ? "PM" : "AM";
 
     hour = hour % 12 || 12;
                 hour: "numeric",
