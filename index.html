@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>be my friend</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="icon.jpg">
+</head>
+
+<body>
+
+
+<!--opening letter-->
+
+<main id="opening-screen" class="screen active">
+
+    <div class="opening-content">
+
+        <img src="icon.jpg" class="opening-icon">
+
+        <h1>Hey...</h1>
+
+        <p>
+            made this because im a bit awkard
+        </p>
+
+        <p class="small-text">
+            idrk how to approach new ppl or know what 2 say
+        </p>
+
+        <button id="open-button" class="main-button">
+            Open
+        </button>
+
+    </div>
+
+</main>
+
+
+<!--letter part-->
+
+<section id="letter-screen" class="screen">
+
+    <div class="letter-container">
+
+    <div class="envelope">
+
+        <div class="envelope-back"></div>
+
+        <div class="letter">
+
+            <div class="letter-header">
+                
+                <h2>hello, potential new friend!</h2>
+                
+            </div>
+
+            <div id="letter-content" class="letter-content">
+
+                <p>
+                    heya, i know we don't rlly talk r know each other that well, but you seem nice and i'd like to get to know you better if that's okay
+                </p>
+
+                <p>
+                    am too quiet and a bit awkward when it comes to befriending people, usually i just try to go along with the vibes of other people
+                </p>
+
+                <p>
+                    so i was was wondering if u were down to become friends and idk maybe hang out outside of school, ofc with other people if thats what u want idrk what to say anymore :p
+                </p>
+
+                <p>
+                    from J.
+                </p>
+
+            </div>
+
+            <div class="letter-footer">
+                <p>J</p>
+            </div>
+
+        </div>
+
+        <div class="envelope-front"></div>
+
+        <div class="envelope-flap"></div>
+
+    </div>
+
+    <button id="letter-next-button" class="main-button">
+        Continue
+    </button>
+
+</div>
+
+</section>
+
+
+<!--playlist section-->
+
+<section id="music-screen" class="screen">
+
+
+<div class="music-container">
+
+    <div class="music-header">
+        <span>♫</span>
+        <h2>A Little Playlist</h2>
+        <span>♫</span>
+    </div>
+
+    <!--spotify embed-->
+    <div class="spotify-player">
+
+        <iframe
+            src="https://open.spotify.com/embed/playlist/1pPdkM2NJNyctO3em3IMII?utm_source=generator"
+            width="100%"
+            height="500"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+    <button id="music-next-button" class="main-button">
+        Continue
+    </button>
+
+</div>
+
+</section>
+
+
+<!--last question-->
+
+<section id="question-screen" class="screen">
+
+    <div class="question-container">
+
+        <div class="question-icon">
+            
+        </div>
+
+        <p class="question-intro">
+            And now...
+        </p>
+
+        <h2>
+            if you've read up to this point so far<br>
+            i wanna shoot a question your way
+        </h2>
+
+        <p class="question-text">
+            are you down for an after school hangout some time?
+        </p>
+
+
+        <div class="answer-buttons">
+
+            <button id="yes-button" class="answer-button yes-button">
+                Yes
+            </button>
+
+            <button id="no-button" class="answer-button no-button">
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--final-->
+
+<section id="yes-screen" class="screen">
+
+<div class="date-container">
+
+    <div class="date-header">
+
+        <p class="date-small-text">
+            AYYYYY pumayag ka :]
+        </p>
+
+        <h1>
+            then it's a date (friendly lang poh)
+        </h1>
+
+        <p>
+            when ka free?
+        </p>
+
+    </div>
+
+
+    <div class="date-form">
+
+        <!-- Date -->
+        <div class="date-field">
+
+            <label for="date-picker">
+                📅 Pick a day
+            </label>
+
+            <input
+                type="date"
+                id="date-picker"
+            >
+
+        </div>
+
+
+        <!-- Time -->
+        <div class="date-field">
+
+            <label for="time-picker">
+                🕐 Pick a time
+            </label>
+
+            <input
+                type="time"
+                id="time-picker"
+            >
+
+        </div>
+
+<!-- Event -->
+<div class="date-field">
+
+    <label for="event-picker">
+        ano trip gawin after school?
+    </label>
+
+    <select id="event-picker">
+
+        <option value="">
+            Choose an activity:
+        </option>
+
+        <option value="Coffee">
+            cafe?
+        </option>
+
+        <option value="Food">
+            food trip?
+        </option>
+
+        <option value="Study">
+            study/review hangout?
+        </option>
+
+        <option value="Casual">
+            js talking?
+        </option>
+
+        <option value="Something else">
+            or if u want, suggest smth
+        </option>
+
+    </select>
+
+</div>
+
+<!-- Custom Event -->
+<div
+    class="date-field"
+    id="custom-event-container"
+    style="display: none;"
+>
+
+    <label for="custom-event">
+        ano suggest mo?
+    </label>
+
+    <input
+        type="text"
+        id="custom-event"
+        placeholder="e.g. Visit a bookstore..."
+        maxlength="100"
+    >
+
+</div>
+        <button
+            id="confirm-date-button"
+            class="main-button"
+        >
+            confirmm
+        </button>
+
+        <p
+            id="date-error"
+            class="date-error"
+        ></p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!--confirmed-->
+
+<section id="confirmed-screen" class="screen">
+
+    <div class="confirmed-container">
+
+        <p class="confirmed-small">
+            alrighty
+        </p>
+
+        <h1>
+            it's a (platonic, friendly) date
+        </h1>
+
+        <div class="confirmed-date">
+
+            <p id="confirmed-date-text"></p>
+
+            <p id="confirmed-time-text"></p>
+
+            <p id="confirmed-event-text"></p>
+
+        </div>
+
+        <p class="confirmed-message">
+            welp that's settled then
+        </p>
+
+        
+        <button
+            id="confirmed-next-button"
+            class="main-button"
+        >
+            but before we're done, theres one last thing
+        </button>
+
+    </div>
+
+</section>
+
+<!-- yesfinal msg-->
+
+<section id="final-screen" class="screen">
+
+    <div class="final-container">
+
+
+        <p class="final-small">
+            one last thing
+        </p>
+
+        <h1>
+            thanks for saying yes
+        </h1>
+
+        <p class="final-message">
+            ik super unexpected and this does seem like a weird way to try and befriend sum1
+        </p>
+
+        <p class="final-message">
+            but thanks for saying yes, am glad :]
+        </p>
+
+        <p class="final-signature">
+            — J
+        </p>
+
+    </div>
+
+</section>
+
+<!--no final-->
+
+<section id="no-screen" class="screen">
+
+    <div class="final-container">
+
+
+        <p class="final-small">
+            okies
+        </p>
+
+        <h1>
+            naiintindihan ko nmn so no worries
+        </h1>
+
+        <p class="final-message">
+            thx for ur honesty
+        </p>
+
+        <p class="final-message">
+            all good, welp at least i tried, right? anw thank u again for taking some time out of ur day to answer
+        </p>
+
+        <p class="final-signature">
+            — J
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+
+</body>
+</html>

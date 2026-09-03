@@ -1,0 +1,1508 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+html,
+body {
+width: 100%;
+min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #3f3530;
+
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(246, 232, 216, 0.45);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+/* =========================
+SCREEN SYSTEM
+========================= */
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.screen.active {
+    display: flex;
+    animation: quietFade 1s ease both;
+}
+
+@keyframes quietFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes quietFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================
+OPENING SCREEN
+========================= */
+
+.opening-content {
+width: min(90%, 500px);
+padding: 50px 35px;
+
+text-align: center;
+
+background: rgba(255, 248, 250, 0.92);
+border-radius: 24px;
+
+box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18);
+
+backdrop-filter: blur(8px);
+
+}
+
+.opening-icon {
+width: 110px;
+height: 110px;
+
+object-fit: cover;
+
+border-radius: 50%;
+
+margin-bottom: 25px;
+
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
+
+animation: gentleFloat 3s ease-in-out infinite;
+
+}
+
+.opening-content h1 {
+font-size: clamp(2.5rem, 8vw, 4rem);
+font-weight: normal;
+
+margin-bottom: 15px;
+
+}
+
+.opening-content p {
+font-size: 1.2rem;
+line-height: 1.7;
+}
+
+.small-text {
+margin-top: 10px;
+
+font-size: 0.95rem !important;
+opacity: 0.7;
+
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.main-button {
+border: none;
+
+margin-top: 30px;
+padding: 13px 30px;
+
+border-radius: 30px;
+
+background: #4a3540;
+color: white;
+
+font-family: inherit;
+font-size: 1rem;
+
+cursor: pointer;
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+.main-button {
+transform: translateY(-3px);
+
+box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.2);
+
+background: #6b4b59;
+
+}
+
+.main-button {
+transform: translateY(0);
+}
+
+/* =========================
+LETTER
+========================= */
+
+.letter {
+    width: 100%;
+    max-height: 75vh;
+    overflow-y: auto;
+
+    padding: clamp(35px, 7vw, 75px);
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 239, 0.97),
+            rgba(250, 241, 220, 0.97)
+        );
+
+    position: relative;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 18px 35px rgba(55, 40, 30, 0.18);
+
+    transform: rotate(-0.3deg);
+}
+
+/* little paper corners */
+
+.letter::before,
+.letter::after {
+content: "";
+
+position: absolute;
+
+font-size: 1.5rem;
+
+opacity: 0.25;
+
+}
+
+
+/* Letter header */
+
+.letter-header {
+    display: block;
+
+    margin-bottom: 45px;
+
+    text-align: left;
+}
+
+.letter-header h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+
+    font-weight: normal;
+
+    color: #3f3530;
+}
+
+.letter-header span {
+    display: none;
+}
+
+.letter-header h2 {
+font-size: clamp(1.8rem, 5vw, 2.5rem);
+font-weight: normal;
+}
+
+.letter-header span {
+opacity: 0.4;
+}
+
+/* Letter text */
+
+.letter-content {
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+
+    font-size: clamp(1rem, 2vw, 1.15rem);
+
+    line-height: 2;
+
+    color: #463b35;
+
+    text-align: left;
+}
+
+.letter-content p {
+    margin-bottom: 30px;
+}
+
+.letter-footer {
+    margin-top: 50px;
+
+    text-align: right;
+
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1.1rem;
+
+    color: #463b35;
+
+    opacity: 0.85;
+}
+
+/* =========================
+MUSIC
+========================= */
+
+.music-container {
+width: min(92%, 600px);
+
+padding: 40px 30px;
+
+background: rgba(255, 248, 250, 0.94);
+
+border-radius: 24px;
+
+box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+
+backdrop-filter: blur(10px);
+
+text-align: center;
+
+}
+
+.music-header {
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+gap: 18px;
+
+margin-bottom: 30px;
+
+}
+
+.music-header h2 {
+font-size: clamp(1.6rem, 5vw, 2.2rem);
+font-weight: normal;
+}
+
+.music-header span {
+opacity: 0.5;
+}
+
+/* Album artwork */
+
+.album-art-container {
+width: 220px;
+height: 220px;
+
+margin: 0 auto 25px;
+
+overflow: hidden;
+
+border-radius: 14px;
+
+box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+.album-art-container img {
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+display: block;
+
+}
+
+/* Song information */
+
+.now-playing h3 {
+font-size: 1.35rem;
+
+margin-bottom: 5px;
+
+}
+
+.now-playing p {
+opacity: 0.65;
+}
+
+/* Player controls */
+
+.player-controls {
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+gap: 25px;
+
+margin-top: 25px;
+
+}
+
+.player-button,
+.play-button {
+border: none;
+
+background: transparent;
+
+color: #4a3540;
+
+cursor: pointer;
+
+font-family: inherit;
+
+transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+}
+
+.player-button {
+font-size: 1.6rem;
+}
+
+.play-button {
+width: 55px;
+height: 55px;
+
+border-radius: 50%;
+
+background: #4a3540;
+color: white;
+
+font-size: 1.2rem;
+
+}
+
+.player-button,
+.play-button {
+transform: scale(1.1);
+}
+
+/* Progress bar */
+
+.progress-container {
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+margin-top: 20px;
+
+font-size: 0.8rem;
+
+opacity: 0.7;
+
+}
+
+#progress-bar {
+flex: 1;
+
+cursor: pointer;
+
+}
+
+/* Playlist */
+
+.playlist {
+margin-top: 35px;
+
+text-align: left;
+
+}
+
+.playlist h3 {
+margin-bottom: 12px;
+
+text-align: center;
+
+font-size: 1.1rem;
+
+}
+
+#playlist-items {
+display: flex;
+
+flex-direction: column;
+
+gap: 8px;
+
+}
+
+.playlist-item {
+width: 100%;
+
+padding: 13px 15px;
+
+border: none;
+
+border-radius: 10px;
+
+background: rgba(74, 53, 64, 0.07);
+
+color: #4a3540;
+
+font-family: inherit;
+
+text-align: left;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.playlist-item {
+background: rgba(74, 53, 64, 0.13);
+
+transform: translateX(3px);
+
+}
+
+.playlist-item.active {
+background: rgba(74, 53, 64, 0.16);
+}
+
+/* =========================
+QUESTION
+========================= */
+
+.question-container {
+width: min(90%, 650px);
+
+padding: 55px 35px;
+
+text-align: center;
+
+background: rgba(255, 248, 250, 0.94);
+
+border-radius: 24px;
+
+box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+
+backdrop-filter: blur(10px);
+
+}
+
+.question-icon {
+font-size: 4rem;
+
+margin-bottom: 20px;
+
+animation: heartbeat 1.5s ease-in-out infinite;
+
+}
+
+.question-intro {
+font-size: 1rem;
+
+opacity: 0.65;
+
+margin-bottom: 15px;
+
+}
+
+.question-container h2 {
+font-size: clamp(1.7rem, 6vw, 2.6rem);
+
+font-weight: normal;
+
+line-height: 1.4;
+
+}
+
+.question-text {
+margin-top: 30px;
+
+font-size: clamp(1.5rem, 5vw, 2.2rem);
+
+font-weight: bold;
+
+}
+
+/* Answer buttons */
+
+.answer-buttons {
+display: flex;
+
+justify-content: center;
+
+gap: 15px;
+
+margin-top: 35px;
+
+flex-wrap: wrap;
+
+}
+
+.answer-button {
+border: none;
+
+padding: 14px 32px;
+
+border-radius: 30px;
+
+font-family: inherit;
+
+font-size: 1rem;
+
+cursor: pointer;
+
+transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+.answer-button {
+transform: translateY(-3px);
+
+box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+
+}
+
+.yes-button {
+background: #4a3540;
+color: white;
+}
+
+.no-button {
+background: rgba(74, 53, 64, 0.1);
+
+color: #4a3540;
+
+}
+
+/* =========================
+FINAL SCREEN
+========================= */
+
+.final-container {
+width: min(90%, 600px);
+
+padding: 60px 30px;
+
+text-align: center;
+
+background: rgba(255, 248, 250, 0.94);
+
+border-radius: 24px;
+
+box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+
+backdrop-filter: blur(10px);
+
+}
+
+.heart-animation {
+font-size: 6rem;
+
+animation: heartbeat 1.2s ease-in-out infinite;
+
+margin-bottom: 20px;
+
+}
+
+.final-container h1 {
+font-size: clamp(2rem, 7vw, 3.5rem);
+
+font-weight: normal;
+
+margin-bottom: 15px;
+
+}
+
+.final-container p {
+font-size: 1.25rem;
+
+line-height: 1.7;
+
+}
+
+.final-small-text {
+margin-top: 15px;
+
+opacity: 0.65;
+
+font-size: 1rem !important;
+
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+
+from {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+@keyframes gentleFloat {
+
+0%,
+100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-8px);
+}
+
+}
+
+@keyframes heartbeat {
+
+0%,
+100% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.12);
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+.screen {
+    padding: 25px 12px;
+}
+
+.opening-content {
+    padding: 40px 22px;
+}
+
+.opening-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.letter {
+    padding: 35px 25px;
+}
+
+.letter-content {
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.music-container {
+    padding: 35px 20px;
+}
+
+.album-art-container {
+    width: 180px;
+    height: 180px;
+}
+
+.question-container {
+    padding: 45px 22px;
+}
+
+}
+
+/* =========================
+   DATE SELECTION
+========================= */
+
+.date-container {
+    width: min(90%, 620px);
+
+    padding: 55px 45px;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 239, 0.97),
+            rgba(250, 241, 220, 0.97)
+        );
+
+    box-shadow:
+        0 18px 35px rgba(55, 40, 30, 0.18);
+
+    transform: rotate(0.25deg);
+
+    text-align: center;
+}
+
+
+/* Date heading */
+
+.date-header {
+    margin-bottom: 40px;
+}
+
+.date-small-text {
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1rem;
+
+    opacity: 0.65;
+
+    margin-bottom: 12px;
+}
+
+.date-header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2rem, 7vw, 3.2rem);
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.date-header > p:last-child {
+    font-size: 1.05rem;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   DATE FORM
+========================= */
+
+.date-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.date-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.date-field label {
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1rem;
+
+    color: #463b35;
+}
+
+.date-field input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: none;
+
+    border-bottom: 1px solid rgba(70, 59, 53, 0.35);
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #3f3530;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    outline: none;
+
+    border-radius: 2px;
+
+    transition: border-color 0.3s ease;
+}
+
+.date-field input:focus {
+    border-bottom-color: #463b35;
+}
+
+
+/* Confirm button */
+
+.date-form .main-button {
+    align-self: center;
+
+    margin-top: 15px;
+}
+
+
+/* Error message */
+
+.date-error {
+    min-height: 20px;
+
+    text-align: center;
+
+    color: #8a5555;
+
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   CONFIRMED DATE
+========================= */
+
+.confirmed-container {
+    width: min(90%, 600px);
+
+    padding: 60px 40px;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 239, 0.97),
+            rgba(250, 241, 220, 0.97)
+        );
+
+    box-shadow:
+        0 18px 35px rgba(55, 40, 30, 0.18);
+
+    text-align: center;
+
+    transform: rotate(-0.25deg);
+}
+
+.confirmed-small {
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1rem;
+
+    opacity: 0.65;
+
+    margin-bottom: 10px;
+}
+
+.confirmed-container h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.confirmed-date {
+    padding: 25px;
+
+    border-top: 1px solid rgba(70, 59, 53, 0.25);
+    border-bottom: 1px solid rgba(70, 59, 53, 0.25);
+
+    margin-bottom: 30px;
+}
+
+.confirmed-date p {
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1.15rem;
+
+    margin: 8px 0;
+}
+
+.confirmed-message {
+    font-family: "Segoe Print", "Bradley Hand", cursive;
+
+    font-size: 1.1rem;
+
+    opacity: 0.8;
+}
+
+.confirmed-heart {
+    margin-top: 30px;
+
+    font-size: 2rem;
+
+    opacity: 0.6;
+}
+
+
+/* =========================
+   MOBILE DATE SCREEN
+========================= */
+
+@media (max-width: 600px) {
+
+    .date-container {
+        padding: 40px 25px;
+    }
+
+    .confirmed-container {
+        padding: 45px 25px;
+    }
+
+}
+
+/* =========================
+   ENVELOPE LETTER ANIMATION
+========================= */
+
+.envelope {
+    position: relative;
+    width: min(90vw, 600px);
+    height: 380px;
+    margin: 120px auto 35px;
+    perspective: 1000px;
+}
+
+/* Envelope body */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #f3d6dc;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+}
+
+/* Letter */
+
+.envelope .letter {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    bottom: 5%;
+
+    box-sizing: border-box;
+
+    /* Old paper */
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf3 0%,
+            #f7efd9 50%,
+            #eee3c7 100%
+        );
+
+    color: #40372f;
+
+    padding: 35px;
+
+    z-index: 2;
+
+    /* Scrap-paper shape */
+    clip-path: polygon(
+        1% 2%,
+        8% 1%,
+        17% 2%,
+        27% 1%,
+        37% 2%,
+        48% 1%,
+        59% 2%,
+        70% 1%,
+        82% 2%,
+        92% 1%,
+        99% 3%,
+
+        98% 13%,
+        99% 25%,
+        98% 37%,
+        99% 49%,
+        98% 62%,
+        99% 74%,
+        98% 87%,
+        99% 98%,
+
+        89% 97%,
+        78% 99%,
+        67% 98%,
+        55% 99%,
+        44% 98%,
+        32% 99%,
+        20% 98%,
+        9% 99%,
+        1% 97%,
+
+        2% 87%,
+        1% 76%,
+        2% 64%,
+        1% 52%,
+        2% 40%,
+        1% 28%,
+        2% 15%
+    );
+
+    /* Preserve envelope animation */
+    transform: translateY(0) rotate(-0.8deg);
+
+    transition:
+        transform 1.2s ease,
+        z-index 0s 0.6s;
+
+    /* Paper depth */
+    filter:
+        drop-shadow(4px 5px 4px rgba(70, 50, 35, 0.12))
+        drop-shadow(8px 12px 14px rgba(70, 50, 35, 0.10));
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.envelope .letter::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(120, 100, 70, 0.025) 0px,
+            rgba(120, 100, 70, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.envelope .letter-content {
+    position: relative;
+    z-index: 2;
+
+    padding-left: 8px;
+
+    border-left: 1px solid rgba(120, 90, 65, 0.15);
+}
+
+.envelope .letter-header,
+.envelope .letter-footer {
+    position: relative;
+    z-index: 2;
+}
+
+.envelope .letter::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 31px,
+            rgba(120, 100, 80, 0.07) 32px
+        );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.envelope .letter::after {
+    content: "";
+
+    position: absolute;
+
+    width: 85px;
+    height: 24px;
+
+    top: 8px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(230, 195, 170, 0.65);
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+/* Envelope front */
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #e8b9c4;
+    clip-path: polygon(
+        0 45%,
+        50% 75%,
+        100% 45%,
+        100% 100%,
+        0 100%
+    );
+    border-radius: 8px;
+    z-index: 3;
+}
+
+/* Envelope flap */
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 55%;
+
+    background: #dca6b4;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin: top center;
+
+    transition: transform 0.8s ease;
+
+    transform-style: preserve-3d;
+
+    backface-visibility: hidden;
+
+    z-index: 4;
+}
+
+/* =========================
+   OPEN ANIMATION
+========================= */
+
+.letter-screen-open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.letter-screen-open .envelope .letter {
+    transform: translateY(-150px) rotate(-0.8deg);
+    z-index: 2;
+}
+
+/* Button */
+
+.letter-container .main-button {
+    position: relative;
+    z-index: 10;
+}
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    /* General */
+
+    .screen {
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       OPENING SCREEN
+    ========================= */
+
+    .opening-content {
+        width: 100%;
+        max-width: 360px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .opening-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .opening-content h1 {
+        font-size: 2rem;
+    }
+
+    .opening-content p {
+        font-size: 0.95rem;
+    }
+
+
+    /* =========================
+       LETTER
+    ========================= */
+
+    .letter-container {
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .envelope {
+        width: 100%;
+        max-width: 360px;
+        height: 280px;
+        margin: 150px auto 30px;
+    }
+
+    .envelope .letter {
+    padding: 22px;
+    font-size: 0.85rem;
+}
+
+    .letter-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .letter-content p {
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       MUSIC PLAYER
+    ========================= */
+
+    .music-container {
+        width: 100%;
+        max-width: 380px;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .music-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .album-art-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .album-art-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player-controls {
+        gap: 20px;
+    }
+
+    .progress-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #progress-bar {
+        width: 100%;
+    }
+
+    .playlist {
+        width: 100%;
+    }
+
+    .playlist-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       QUESTION
+    ========================= */
+
+    .question-container {
+        width: 100%;
+        max-width: 360px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .question-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .question-text {
+        font-size: 1.2rem;
+    }
+
+    .answer-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .answer-button {
+        width: 100%;
+    }
+
+
+    /* =========================
+       DATE SELECTION
+    ========================= */
+
+    .date-container {
+        width: 100%;
+        max-width: 380px;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .date-header h1 {
+        font-size: 2rem;
+    }
+
+    .date-form {
+        width: 100%;
+    }
+
+    .date-field {
+        width: 100%;
+    }
+
+    .date-field input,
+    .date-field select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+
+    /* =========================
+       CONFIRMED SCREEN
+    ========================= */
+
+    .confirmed-container {
+        width: 100%;
+        max-width: 360px;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .confirmed-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .confirmed-date {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       FINAL SCREEN
+    ========================= */
+
+    .final-container {
+        width: 100%;
+        max-width: 360px;
+        padding: 25px 20px;
+        box-sizing: border-box;
+    }
+
+    .final-container h1 {
+        font-size: 2rem;
+    }
+
+    .final-message {
+        line-height: 1.7;
+    }
+
+}
+
+.yes-button {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+/* =========================
+   SPOTIFY PLAYER
+========================= */
+
+.spotify-player {
+    width: 100%;
+    margin: 25px auto 10px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.spotify-player iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
